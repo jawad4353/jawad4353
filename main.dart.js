@@ -72571,7 +72571,7 @@ return A.N($async$vh,r)}}
 A.a2F.prototype={}
 A.H9.prototype={
 L(a){var s,r,q,p=null
-A.arM(new A.kL("assets/images/profile_image.png",p,p),a)
+A.arM(new A.kL("assets/images/profile_image.PNG",p,p),a)
 A.arM(new A.kL("assets/images/bg.gif",p,p),a)
 s=A.a([new A.u3(new A.ry(new A.a1w(),p,p,p,A.aGG(),A.aFj(),t.ZY),p,p,p,p,t.RN)],t.Ds)
 r=A.cM([B.br,B.bS,B.eM,B.b7],t.C)
@@ -72742,7 +72742,7 @@ $2(a,b){var s,r,q=null,p=b.b,o=this.a,n=o.f,m=p*(n?0.45:0.3),l=$.b8().d
 l===$&&A.b()
 s=$.oF()
 l=A.eu(q,A.anx(A.vx("assets/images/bg.gif",q,B.dW),0.1),B.w,s,q,800,q,q,l.a.a)
-s=A.eu(q,A.vx("assets/images/profile_image.png",q,B.xK),B.fW,q,new A.dK(s,q,q,q,q,q,B.fG),m,q,q,m)
+s=A.eu(q,A.vx("assets/images/profile_image.PNG",q,B.xK),B.fW,q,new A.dK(s,q,q,q,q,q,B.fG),m,q,q,m)
 n=n?0.8:0.5
 r=t.p
 return A.yf(B.cC,A.a([l,A.cs(A.aj9(B.wK,A.a([s,A.cs(o.a0u(),q,p*n)],r),B.iZ,B.wK),b.d,p)],r),B.f8)},
