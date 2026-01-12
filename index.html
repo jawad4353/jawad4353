@@ -15,10 +15,16 @@
     the `--base-href` argument provided to `flutter build`.
   -->
   <base href="/jawad4353/">
+  <script>
+    if (document.querySelector('base').getAttribute('href') === '/') {
+      document.querySelector('base').setAttribute('href', '/');
+    }
+  </script>
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,9 +38,24 @@
   <title>jawad_portfolio</title>
   <link rel="manifest" href="manifest.json">
 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
   <script>
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1320142591";
+    const serviceWorkerVersion = "1280924999";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -42,17 +63,25 @@
 <body>
   <script>
     window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
+      function initializeFlutter() {
+        if (typeof _flutter !== 'undefined' && _flutter.loader) {
+          _flutter.loader.loadEntrypoint({
+            serviceWorker: {
+              serviceWorkerVersion: serviceWorkerVersion,
+            },
+            onEntrypointLoaded: function(engineInitializer) {
+              engineInitializer.initializeEngine().then(function(appRunner) {
+                appRunner.runApp();
+              }).catch(function(error) {
+                console.error('Error initializing Flutter engine:', error);
+              });
+            }
           });
+        } else {
+          setTimeout(initializeFlutter, 50);
         }
-      });
+      }
+      initializeFlutter();
     });
   </script>
 </body>
