@@ -1,0 +1,3 @@
+# Publish Next.js `_next` assets on GitHub Pages (Jekyll otherwise skips `_` paths)
+include:
+  - _next
